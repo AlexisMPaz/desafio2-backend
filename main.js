@@ -96,7 +96,7 @@ class Product {
 
 // Creacion del Manager y los productos
 
-const manager1 = new ProductManager("./productsManager1.txt");
+const manager1 = new ProductManager("./data.json");
 
 const product1 = new Product("Producto prueba", "Este es un producto de prueba", 200, "Sin Imagen", "abc123", 25);
 const product2 = new Product("Producto prueba 2", "Este es el segundo producto de prueba", 500, "Sin Imagen", "abc456", 25);
@@ -107,7 +107,7 @@ const product1Update = new Product("Producto prueba actualizado", "Este es el pr
 // TESTEO
 
 const test = async () => {
-    await fs.writeFile("./productsManager1.txt", "[]") //Iniciar base de datos con array vacio (archivo de texto)
+    await fs.writeFile("./data.json", "[]") //Iniciar base de datos con array vacio (archivo de texto)
 
     await manager1.getProducts(); //Muestra por consola el array vacio
 
